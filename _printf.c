@@ -35,7 +35,7 @@ int _printf(const char *format, ...) {
                     printed_chars += 1;
                     s++;
                 }
-            }else if (format[i] == 'd'){
+            }else if (format[i] == 'd' || format[i] == 'i'){
 	    	x = va_arg(list, int);
 		printf("%d", x);
 		while (x > 0){
