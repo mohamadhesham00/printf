@@ -22,7 +22,7 @@ int _printf(const char *format, ...) {
             if (format[i] == 'c') {
                 printed_chars += 1;
 		va_arg(list, int);
-            } else if (format[i] == 's') {
+            } else if (format[i] == 's' || format[i] == '%' ) {
                 s = va_arg(list, char*);
 
                 while (*(s) != '\0') {
@@ -30,7 +30,7 @@ int _printf(const char *format, ...) {
                     s++;
                 }
             } else {
-                printed_chars++;
+                printed_chars += 2;
             }
         }
     }
