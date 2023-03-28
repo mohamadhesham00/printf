@@ -24,9 +24,9 @@ int _printf(const char *format, ...) {
                 printed_chars += 1;
 		c = va_arg(list, int);
 		_putchar(c);
-            }else if (format[i] = '%'){
+            }else if (format[i] == '%'){
 	    	printed_chars++;
-		_purchar('%');
+		_putchar('%');
 	    } 
 	    else if (format[i] == 's') {
                 s = va_arg(list, char*);
