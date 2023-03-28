@@ -20,10 +20,13 @@ int _printf(const char *format, ...) {
 	    	++i;
 		if (format[i] == 'n')
 			printf("\n");
+	    	else{ 
+			
+			printf("\\%c", format[i]);
+			    
+		}
 	    }
-	
             else{
-		    
 	        _putchar(format[i]);
                 printed_chars++;
 	}
@@ -57,7 +60,7 @@ int _printf(const char *format, ...) {
 	    	}
 	    }
 	    else {
-		printf("%");
+		printf("%%");
 		_putchar(format[i]);
                 printed_chars += 2;
             }
