@@ -4,7 +4,6 @@
 #include <stdio.h>
 #include <unistd.h>
 int _putchar (char c);
-void print_strings(const char *separator, const unsigned int n, ...);
-void turn_to_bin(int n);
+void turn_to_bin(unsigned int n);
 int _printf(const char *format, ...);
 #endif

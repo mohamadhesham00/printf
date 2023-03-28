@@ -4,7 +4,7 @@
  * @n - number to be turned into
  * Return - void
  */
-void turn_to_bin(int n)
+void turn_to_bin(unsigned int n)
 {
 	int i, j;
 	int arr[33];
