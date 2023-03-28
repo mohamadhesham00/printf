@@ -57,6 +57,8 @@ int _printf(const char *format, ...) {
 	    	}
 	    }
 	    else {
+		printf("%");
+		_putchar(format[i]);
                 printed_chars += 2;
             }
         }
