@@ -5,7 +5,7 @@
  * Return: Printed chars.
  */
 int _printf(const char *format, ...) {
-    int i, printed_chars = 0;
+    int i, x, printed_chars = 0;
     va_list list;
     char *s;
 
@@ -29,7 +29,14 @@ int _printf(const char *format, ...) {
                     printed_chars += 1;
                     s++;
                 }
-            } else {
+            }else if (format[i] == 'd'){
+	    	x = va_arg(list, int);
+		while (x > 0){
+			x /= 10;
+			printed_chars++;
+	    	}
+	    }
+	    else {
                 printed_chars += 2;
             }
         }
