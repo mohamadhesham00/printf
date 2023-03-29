@@ -19,9 +19,10 @@ int _printf(const char *format, ...) {
         if (format[i] != '%') {
 	    if (format[i] == '\\'){
 	    	++i;
-		if (format[i] == 'n')
+		if (format[i] == 'n'){
 			printed_chars++;
 			printf("\n");
+		}
 	    	else{ 
 			printed_chars += 2;		
 			printf("\\%c", format[i]);
