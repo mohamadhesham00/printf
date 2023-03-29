@@ -22,7 +22,7 @@ int _printf(const char *format, ...) {
 		if (format[i] == 'n')
 			printf("\n");
 	    	else{ 
-			
+			printed_chars += 2;		
 			printf("\\%c", format[i]);
 			    
 		}
