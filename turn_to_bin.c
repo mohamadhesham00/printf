@@ -3,6 +3,7 @@
  * turn_to_bin - to turn an int number to binary
  * @n - number to be turned into
  * Return - void
+ * aaaaaaaaaa
  */
 void turn_to_bin(unsigned int n)
 {
@@ -19,8 +20,3 @@ void turn_to_bin(unsigned int n)
 	for (j = i - 1; j >= 0; j--)
 		printf("%d", arr[j]);
 }
-/**
- * turn_to_bin - to turn an int number to binary
- * @n - number to be turned into
- * Return - void
- */
