@@ -40,6 +40,8 @@ int _printf(const char *format, ...) {
             if (format[i] == 'c') {
                 printed_chars += 1;
 		c = va_arg(list, int);
+		if (c == '\0')
+			return (-1);
 		_putchar(c);
             }else if (format[i] == '%'){
 	    	printed_chars++;
@@ -47,6 +49,8 @@ int _printf(const char *format, ...) {
 	    } 
 	    else if (format[i] == 's') {
                 s = va_arg(list, char*);
+		if (s == NULL)
+			return (-1);
 		printf("%s", s);
                 while (*(s) != '\0') {
                     printed_chars += 1;
