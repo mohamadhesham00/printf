@@ -7,6 +7,7 @@
  */
 int _printf(const char *format, ...) {
     int i, x, printed_chars = 0;
+    unsigned int ui;
     va_list list;
     char *s, c;
 
@@ -57,10 +58,28 @@ int _printf(const char *format, ...) {
 	    else if (format[i] == 'd' || format[i] == 'i'){
 	    	x = va_arg(list, int);
 		printf("%d", x);
-		while (x > 0){
+		if (x < 0)
+			printed_chars++;
+		while (x != 0){
 			x /= 10;
 			printed_chars++;
 	    	}
+	    }
+	    else if (format[i] == 'u'){
+	    	ui = va_arg(list, unsigned int);
+		printf("%u", ui);
+		while (ui > 0){
+			ui /= 10;
+			printed_chars++;
+		}
+	    }
+	    else if (format [i] == 'o'){
+		    ui = va_arg(list, unsigned int);
+		    printf("%o", ui);
+		    while(ui > 0){
+			    ui /= 10;
+			    printed_chars++;
+		    }
 	    }
 	    else {
 		printf("%%");
